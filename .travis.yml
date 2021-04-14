@@ -8,7 +8,7 @@ before_script:
 deploy:
   provider: heroku
   api_key:
-    secure: KEY
-  app: rails-test-app-article
+    secure: "QB70u/6sgPanMCPEtkzei6aKTjC21l33PNXxLcSKX6vTNUmss2+nBP33HyHfvo3F0GKtAnIgJjlBWdZ0+L13cWp6lOdqVEmYHmUez3104AodUjCG+rJyVXExX7rfdhFJSVy0PPCj43IAf7KYDol3oJh4Ez5TP+82Tniqy2Crq4FGOFZ+Y0zKcID7Z4/gacaFmSDWH/g61UPqdr+Z9YL0hDw/9yePpKypwQjAqfa4wDxqTmJDl8gCQXdHq+EHRFfJgjkSm1tFnBgb6eYGnan+0xBE27CeYSRhHPRVRo6ZPVdvaVt+Unz3ol1AVvWgXFuq+kzO5LrcRqyImZFZCjPDJRM1YRwJO8sbMtTyLnJ8AXVxNKxq6OV830WuZkJeJ+NVkG3dYIDKRgITgKIPLMJLPbAtcIhptApKcVaJy52XolFgJyTtkQ3ONr6mss/Kn3P2hJDQ0CR68AzpKpViXYR0bhSMpQfvqipS/a7ZlhnAnPC9W6JsEucNAal+7PH8AHuQjgOHWn4zDGghixC0V8Y56alsgGHoba+LkrucGXP5x7/pDEOocRnqmSLh0CHoJE+N9YKWFF16SGxbg30BJX+zZsPOz5U06RUuMzh3rFSTtjdVHnXZRbPKjCbU5S9XLxrBeQB/aQCCH4CnpzrnM7JskYOt02PV1DXPFdopLgbh/xM="
+  app: pure-chamber-22336
   on:
-    repo: felipeluizsoares/rails-test-app
+    repo: RecipesOnRails/ROR_recipe_microservice
