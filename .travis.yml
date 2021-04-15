@@ -4,6 +4,9 @@ rbenv:
 before_install:
 - gem install bundler
 - nvm install --lts
+jobs:
+  exclude:
+    - rake
 deploy:
   provider: heroku
   api_key:
