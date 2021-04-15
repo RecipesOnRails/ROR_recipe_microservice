@@ -1,17 +1,11 @@
 language: ruby
 rbenv:
 - 2.5.3
-addons:
-  postgresql: 9.6
 before_install:
 - gem install bundler
 - nvm install --lts
-script:
-- bundle exec rails db:{create,migrate} RAILS_ENV=test
-- bundle exec rspec
 deploy:
   provider: heroku
   api_key:
     secure: dAzo+Oy/WU+SmKk8j0dxWIYhuTzt4v66P3orIDGQ4Xx7LsyH/7GB4+nrwlzm0kItPr47i+uOFKlLpXuePFCndc6O0QgQXq2iVZ4rawmXut13tnS/9Xf+ANcAcMXT9ZARzJXyDuQrafxzvm8SndZ/7JqrLwAZQZFFfnN0klxa/+9WHPyHrih815UlU6dyITSF1m/0kR30Ntnssm75SSE/WPCpx8fFixXu7BOOwpAxNDPeji4gvpA415v5eylvb6+Q6a7k6uJHrIPCeF5nhCU0H5/+Iys6j1uqhiwZxN0PIbNma6ESfhe1jRqYrxayJ90C9VDC7bkC+5IvaB9Y3OJv46aB4Xsldi2OhGbcYBtlZm2ebt2gcchE3Z30flwTyCghpr31EtGGVVcYmx/5KK5acqQ6i0U7gG5MiLMaQV+dOIgWJEFjlTqypF/1yyncXoju5NiCkDIWzlPrYG0FsLEOzpsvMvkf/GVAcoWs1GLuAV7bJif4pNp5N69C67f0GsYKaTNPeMUFTqOGZhMn0VYEDGxDvseMOV1Lg3gw3S1SZaRUlGpa5qnWsmBo3yhH/p+U3X7FFvUlzDz88y2Bjqd2ytsLWeTM2dQkJBhoniMp1cbhH2Ax86L4EuJQNAqxrFRjaWJAryMATOkbsDmCDZP1/xVOU3Cu7tK+wJFb93DBMQM=
   app: pure-chamber-22336
-  run: rails db:migrate
