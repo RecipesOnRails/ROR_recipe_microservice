@@ -1,7 +1,9 @@
-require 'sinatra/base'
+require 'sinatra'
+require 'json'
 
-class RecipeService < Sinatra::Base
-  get '/' do
-    'Hello World!'
-  end
+get '/' do
+  content_type :json
+  
+  data = {message: 'Hello World!'}
+  data.to_json
 end
