@@ -27,4 +27,20 @@ class RecipeFacade
     end
     memo
   end
+
+  def self.parse_search_endpoint(ingredient)
+    recipes = RecipeService.get_recipe_search(ingredient)
+    memo = []
+    recipes[:results].each do |recipe|
+      details = {}
+      details[:title] = recipe[:title]
+      details[:image] = recipe[:image]
+      details[:id] = recipe[:id]
+      details[:id] = recipe[:id]
+      details[:cuisine] = recipe[:cuisines].first
+      details[:calories] = recipe[:nutrition][:nutrients].first[:amount]
+      memo << details
+    end
+    memo  
+  end
 end

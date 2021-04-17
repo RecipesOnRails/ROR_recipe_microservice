@@ -17,4 +17,14 @@ class RecipeService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def self.get_recipe_search(ingredient)
+    response = connection.get("/recipes/complexSearch") do |request|
+      request.params['includeIngredients'] = "#{ingredient}"
+      request.params['instructionsRequired'] = 'true'
+      request.params['addRecipeNutrition'] = 'true'
+      request.params['number'] = "100"
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
