@@ -133,8 +133,7 @@ GEM
     websocket (1.2.9)
 
 PLATFORMS
-  x86_64-darwin-19
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   faraday
@@ -156,4 +155,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.2.8
+   2.1.4
