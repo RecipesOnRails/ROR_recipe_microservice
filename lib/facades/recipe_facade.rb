@@ -25,8 +25,6 @@ class RecipeFacade
     recipe[:nutrition][:nutrients].map do |nutrient|
       memo[:nutrients] << {:name =>nutrient[:name], :amount=>"#{nutrient[:amount]} " + "#{nutrient[:unit]}"}
     end
+    memo
   end
-
-
-
 end
