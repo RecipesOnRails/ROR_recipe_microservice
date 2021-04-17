@@ -11,4 +11,10 @@ RSpec.describe "Recipes Service" do
 
     end
   end
+
+  it 'can retrieve a search for recipes that use an ingredient' do
+    VCR.use_cassette("recipesearch") do
+      expect(RecipeService.get_recipe_search("chicken")).to be_a(Hash)
+    end
+  end
 end

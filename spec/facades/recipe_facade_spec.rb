@@ -46,4 +46,22 @@ RSpec.describe "Recipes Facade" do
       end
     end
   end
+
+  it 'can parse the info from the recipe search endpoint' do
+    VCR.use_cassette("search_endpoint_parse") do
+      data = RecipeFacade.parse_search_endpoint("chicken")
+      expect(data).to be_a(Array)
+      data.each do |recipe|
+        expect(recipe).to have_key(:title)
+        expect(recipe[:title]).to be_a(String)
+        expect(recipe).to have_key(:image)
+        expect(recipe[:image]).to be_a(String)
+        expect(recipe).to have_key(:id)
+        expect(recipe[:id]).to be_a(Integer)
+        expect(recipe).to have_key(:cuisine)
+        expect(recipe).to have_key(:calories)
+        expect(recipe[:calories]).to be_a(Float)
+      end  
+    end
+  end
 end

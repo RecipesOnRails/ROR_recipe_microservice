@@ -8,7 +8,7 @@ RSpec.describe RecipeMicroserviceController, type: :request do
     expect(body[:message]).to eq("Hello World!")
   end
 
-   it 'returns hello world' do
+   it 'returns a recipes details' do
       VCR.use_cassette("RecipeViewRequest") do
         get '/recipes/12'
         recipe = JSON.parse(last_response.body, symbolize_names: true)
@@ -49,6 +49,25 @@ RSpec.describe RecipeMicroserviceController, type: :request do
           expect(nutrient).to have_key(:amount)
           expect(nutrient[:amount]).to be_a(String)
         end
+    end
+  end
+  it 'returns a recipes search' do
+    VCR.use_cassette("searchcontroller") do
+      get '/search/chicken'
+
+      data = JSON.parse(last_response.body, symbolize_names: true)
+      expect(data).to be_a(Array)
+      data.each do |recipe|
+        expect(recipe).to have_key(:title)
+        expect(recipe[:title]).to be_a(String)
+        expect(recipe).to have_key(:image)
+        expect(recipe[:image]).to be_a(String)
+        expect(recipe).to have_key(:id)
+        expect(recipe[:id]).to be_a(Integer)
+        expect(recipe).to have_key(:cuisine)
+        expect(recipe).to have_key(:calories)
+        expect(recipe[:calories]).to be_a(Float)
+      end
     end
   end
 end
