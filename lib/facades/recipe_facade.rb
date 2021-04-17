@@ -7,7 +7,6 @@ class RecipeFacade
     memo[:image] = recipe[:image]
     memo[:recipe_info] = recipe[:summary]
 
-    require "pry"; binding.pry
     if recipe[:analyzedInstructions] == []
       memo[:instructions]= recipe[:instructions]
     else
