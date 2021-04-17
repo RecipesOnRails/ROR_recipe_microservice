@@ -6,6 +6,7 @@ RSpec.describe "Recipes Facade" do
     VCR.use_cassette("RecipeFacade") do
       recipe_id = 123
       recipe = RecipeFacade.parse_recipe_endpoint(recipe_id)
+
       expect(recipe).to be_a(Hash)
 
       expect(recipe).to have_key(:name)
