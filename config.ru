@@ -1,4 +1,8 @@
-# This file is used by Rack-based servers to start the application.
+require 'sinatra'
+require 'rubygems'
+require 'bundler'
+require 'require_all'
 
-require_relative 'recipe_service'
-run RecipeService
+Bundler.require
+
+run RecipeMicroserviceController

@@ -1,1 +1,2 @@
-task(:default) { require_relative 'test' }
+require 'rspec/core/rake_task'
+task :default => :spec
