@@ -3,6 +3,7 @@ class RecipeFacade
   def self.parse_recipe_endpoint(id)
     recipe = RecipeService.get_recipe_info(id)
     memo = {}
+    memo[:id] = recipe[:id]
     memo[:name] = recipe[:title]
     memo[:image] = recipe[:image]
     memo[:recipe_info] = recipe[:summary]
@@ -36,11 +37,10 @@ class RecipeFacade
       details[:title] = recipe[:title]
       details[:image] = recipe[:image]
       details[:id] = recipe[:id]
-      details[:id] = recipe[:id]
       details[:cuisine] = recipe[:cuisines].first
       details[:calories] = recipe[:nutrition][:nutrients].first[:amount]
       memo << details
     end
-    memo  
+    memo
   end
 end
