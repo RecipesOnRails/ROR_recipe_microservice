@@ -13,6 +13,7 @@ class RecipeMicroserviceController < Sinatra::Base
 
     data = RecipeFacade.parse_recipe_endpoint(params["id"])
     data.to_json
+    #render json reciepeSerializer.new(recipe)
   end
 
   get '/api/v1/search/:ingredient' do
