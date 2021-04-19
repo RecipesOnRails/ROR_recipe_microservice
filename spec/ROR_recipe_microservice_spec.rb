@@ -10,7 +10,7 @@ RSpec.describe RecipeMicroserviceController, type: :request do
 
    it 'returns a recipes details' do
       VCR.use_cassette("RecipeViewRequest") do
-        get '/recipes/12'
+        get '/api/v1/recipes/12'
         recipe = JSON.parse(last_response.body, symbolize_names: true)
         expect(recipe).to be_a(Hash)
 
@@ -53,7 +53,7 @@ RSpec.describe RecipeMicroserviceController, type: :request do
   end
   it 'returns a recipes search' do
     VCR.use_cassette("searchcontroller") do
-      get '/search/chicken'
+      get '/api/v1/search/chicken'
 
       data = JSON.parse(last_response.body, symbolize_names: true)
       expect(data).to be_a(Array)

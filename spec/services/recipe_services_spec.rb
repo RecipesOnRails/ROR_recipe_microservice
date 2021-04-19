@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 RSpec.describe "Recipes Service" do
+  
   it "can retrive the recipe information endpoint" do
 
     VCR.use_cassette("RecipeViewPageInfo") do
