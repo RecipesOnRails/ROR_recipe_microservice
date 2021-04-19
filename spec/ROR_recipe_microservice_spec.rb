@@ -11,6 +11,7 @@ RSpec.describe RecipeMicroserviceController, type: :request do
    it 'returns a recipes details' do
       VCR.use_cassette("RecipeViewRequest") do
         get '/api/v1/recipes/12'
+        # require 'pry'; binding.pry
         recipe = JSON.parse(last_response.body, symbolize_names: true)
         expect(recipe).to be_a(Hash)
 

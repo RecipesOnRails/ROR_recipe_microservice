@@ -8,6 +8,7 @@ class Recipe
               :nutrients
 
   def initialize(data)
+    # require 'pry'; binding.pry
     @id = data[:id]
     @name = data[:title]
     @image = data[:image]
@@ -16,13 +17,13 @@ class Recipe
     @ingredients = get_ingredients(data[:extendedIngredients])
     @nutrients = get_nutrients(data[:nutrition][:nutrients])
   end
-
+  
   def get_instructions(instructions, analyzed_instructions)
     if analyzed_instructions == []
       instructions
     else
-      instructions= []
-      analyzed_instructions.first[:steps].map do |step|
+      instructions = []
+      analyzed_instructions[0][:steps].each do |step|
         instructions << {:step => step[:number], :instruction => step[:step]}
       end
       instructions

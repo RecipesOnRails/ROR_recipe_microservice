@@ -13,6 +13,8 @@ gem 'travis'
 gem 'rubocop'
 gem 'simplecov'
 gem 'require_all'
+gem 'fast_jsonapi'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry'
