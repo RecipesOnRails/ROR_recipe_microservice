@@ -7,7 +7,7 @@ class RecipeService
   def self.connection
     Faraday.new("https://api.spoonacular.com") do |request|
       # request.params['apiKey'] = "fc0a6974411947b4868abf64b921784f"
-      request.params['apiKey'] = ENV['recipe_key']
+      request.params['apiKey'] = ENV["RECIPE_KEY"]
     end
   end
 
@@ -15,6 +15,7 @@ class RecipeService
     response = connection.get("/recipes/#{id}/information") do |request|
       request.params['includeNutrition'] = "true"
     end
+    # require "pry";binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 

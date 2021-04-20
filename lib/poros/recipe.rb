@@ -36,7 +36,7 @@ class Recipe
     end
     ingredients
   end
-  
+
   def get_nutrients(nutrition)
     nutrients = []
     nutrition.map do |nutrient|
