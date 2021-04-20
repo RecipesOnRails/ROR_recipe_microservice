@@ -1,24 +1,23 @@
-# README
+# Recipes on Rails - Spoonacular Microservice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We utilized the [Spoonacular Public APIs](https://spoonacular.com/food-api) to access all of our recipe information in this project. 
 
-Things you may want to cover:
+## Endpoints
 
-* Ruby version
+  ### Endpoint name
+  
+  **Required** params:  
+    * param 1  
+    * param 2
+    
+    ` get request `
+    
+    ` data structure `
+    
+    
+## Built With
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Sinatra
+* RSpec
+* Rubocop
+* Simplecov
