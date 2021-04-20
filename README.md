@@ -12,7 +12,14 @@ We utilized the [Spoonacular Public APIs](https://spoonacular.com/food-api) to a
     
     ` get request `
     
-    ` data structure `
+    ` {"data": {
+          "attributes": {
+              "id": Integer,
+              "title": String,
+              "summary": Text
+          }
+        }
+      } `
     
     
 ## Built With
