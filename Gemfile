@@ -13,7 +13,12 @@ gem 'travis'
 gem 'rubocop'
 gem 'simplecov'
 gem 'require_all'
+<<<<<<< HEAD
 gem 'dotenv'
+=======
+gem 'fast_jsonapi'
+gem 'active_model_serializers'
+>>>>>>> 8a1d2441a3fee9b6c1093fab1242932d3196028b
 
 group :development, :test do
   gem 'pry'

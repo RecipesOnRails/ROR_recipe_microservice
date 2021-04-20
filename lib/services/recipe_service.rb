@@ -12,10 +12,12 @@ class RecipeService
   end
 
   def self.get_recipe_info(id)
+    require 'pry'; binding.pry
     response = connection.get("/recipes/#{id}/information") do |request|
-      request.params['includeNutrition'] = "true"
+      # request.params['apiKey'] = ENV['recipe_key']
+      request.params['includeNutrition'] = true
     end
-    # require "pry";binding.pry
+    # require 'pry'; binding.pry
     JSON.parse(response.body, symbolize_names: true)
   end
 
