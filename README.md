@@ -24,7 +24,7 @@ We utilized the [Spoonacular Public APIs](https://spoonacular.com/food-api) to a
     
 ## Built With
 
-* Sinatra
-* RSpec
-* Rubocop
-* Simplecov
+- Sinatra
+- RSpec
+- Rubocop
+- Simplecov
