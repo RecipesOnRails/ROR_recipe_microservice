@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 RSpec.describe "Recipes Service" do
-  
+
   it "can retrive the recipe information endpoint" do
 
-    VCR.use_cassette("RecipeViewPageInfo") do
+    VCR.use_cassette("RecipeViewPageInfo", :allow_playback_repeats => true) do
       recipe_id = 123
       info = RecipeService.get_recipe_info(recipe_id)
 

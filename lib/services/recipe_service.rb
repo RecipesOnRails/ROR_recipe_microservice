@@ -12,7 +12,7 @@ class RecipeService
   end
 
   def self.get_recipe_info(id)
-    response = connection.get("recipes/#{id}/information") do |request|
+    response = connection.get("/recipes/#{id}/information") do |request|
       request.params['includeNutrition'] = "true"
     end
     JSON.parse(response.body, symbolize_names: true)
