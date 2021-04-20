@@ -13,6 +13,7 @@ gem 'travis'
 gem 'rubocop'
 gem 'simplecov'
 gem 'require_all'
+gem 'dotenv'
 
 group :development, :test do
   gem 'pry'
