@@ -14,13 +14,17 @@ class Recipe
     @recipe_info = data[:summary]
     @instructions = new_recipe_instructions(data[:instructions], data[:analyzedInstructions])
     @ingredients = new_recipe_ingredients(data[:extendedIngredients])
-    @nutrients = new_recipe_nutrients(data[:nutrition][:nutrients])
+    @nutrients = new_recipe_nutrients((data[:nutrtion] != nil) ? data[:nutrition][:nutrients] : nil)
   end
 
   def new_recipe_instructions(instructions, analyzed_instructions)
     data = get_instructions(instructions, analyzed_instructions)
-    data.map do |instruction|
-      Instruction.new(instruction)
+    if data == nil
+      []
+    else
+      data.map do |instruction|
+        Instruction.new(instruction)
+      end
     end
   end
 
@@ -38,11 +42,13 @@ class Recipe
     end
   end
 
-  def get_instructions(instructions, analyzed_instructions)
+  def get_instructions(incoming_instructions, analyzed_instructions)
+    instructions = []
     if analyzed_instructions == []
+      incoming_instructions
+    elsif incoming_instructions == nil
       instructions
     else
-      instructions = []
       analyzed_instructions.first[:steps].each do |step|
         instructions << {:step => step[:number], :instruction => step[:step]}
       end
@@ -60,8 +66,10 @@ class Recipe
 
   def get_nutrients(nutrition)
     nutrients = []
-    nutrition.map do |nutrient|
-      nutrients << {:name =>nutrient[:name], :amount=>"#{nutrient[:amount]} " + "#{nutrient[:unit]}"}
+    if nutrition != nil
+      nutrition.map do |nutrient|
+        nutrients << {:name =>nutrient[:name], :amount=>"#{nutrient[:amount]} " + "#{nutrient[:unit]}"}
+      end
     end
     nutrients
   end
