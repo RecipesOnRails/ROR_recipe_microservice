@@ -14,9 +14,9 @@ class RecipeMicroserviceController < Sinatra::Base
     content_type :json
 
     recipe = RecipeFacade.parse_recipe_endpoint(params["id"])
-    # recipe.to_json
-    require "pry";binding.pry
-    render json: RecipeSerializer.new(recipe)
+
+    body RecipeSerializer.new(recipe).serialized_json
+    status 201
   end
 
   get '/api/v1/search/:ingredient' do

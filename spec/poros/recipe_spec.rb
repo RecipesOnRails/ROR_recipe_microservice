@@ -16,26 +16,17 @@ RSpec.describe "recipe poro" do
 
       expect(recipe.instructions).to be_an(Array)
       recipe.instructions.each do |instruction|
-        expect(instruction).to have_key(:step)
-        expect(instruction[:step]).to be_a(Integer)
-        expect(instruction).to have_key(:instruction)
-        expect(instruction[:instruction]).to be_a(String)
+        expect(instruction).to be_an(Instruction)
       end
 
       expect(recipe.ingredients).to be_an(Array)
       recipe.ingredients.each do |ingredient|
-        expect(ingredient).to have_key(:name)
-        expect(ingredient[:name]).to be_a(String)
-        expect(ingredient).to have_key(:amount)
-        expect(ingredient[:amount]).to be_a(String)
+        expect(ingredient).to be_an(Ingredient)
       end
 
-      expect(recipe.nutrients).to be_a(Array)
+      expect(recipe.nutrients).to be_an(Array)
       recipe.nutrients.each do |nutrient|
-        expect(nutrient).to have_key(:name)
-        expect(nutrient[:name]).to be_a(String)
-        expect(nutrient).to have_key(:amount)
-        expect(nutrient[:amount]).to be_a(String)
+        expect(nutrient).to be_a(Nutrient)
       end
     end
   end

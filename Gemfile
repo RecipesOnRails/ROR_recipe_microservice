@@ -15,7 +15,6 @@ gem 'simplecov'
 gem 'require_all'
 gem 'dotenv'
 gem 'fast_jsonapi'
-gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry'
