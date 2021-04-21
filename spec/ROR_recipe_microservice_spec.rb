@@ -75,4 +75,11 @@ RSpec.describe RecipeMicroserviceController, type: :request do
       end
     end
   end
+
+  it 'returns error when recipe id not found' do
+    get '/api/v1/recipes/8'
+
+    expect(last_response.body).to eq("Your recipe could not be found")
+    expect(last_response.status).to eq(500)
+  end
 end
