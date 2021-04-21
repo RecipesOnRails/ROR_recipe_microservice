@@ -1,5 +1,7 @@
 require 'sinatra'
 require 'json'
+require 'fast_jsonapi'
+
 class RecipeMicroserviceController < Sinatra::Base
   get '/' do
     content_type :json
@@ -11,8 +13,10 @@ class RecipeMicroserviceController < Sinatra::Base
   get '/api/v1/recipes/:id' do
     content_type :json
 
-    data = RecipeFacade.parse_recipe_endpoint(params["id"])
-    data.to_json
+    recipe = RecipeFacade.parse_recipe_endpoint(params["id"])
+
+    body RecipeSerializer.new(recipe).serialized_json
+    status 201
   end
 
   get '/api/v1/search/:ingredient' do

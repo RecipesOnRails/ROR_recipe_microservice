@@ -13,6 +13,8 @@ gem 'travis'
 gem 'rubocop'
 gem 'simplecov'
 gem 'require_all'
+gem 'dotenv'
+gem 'fast_jsonapi'
 
 group :development, :test do
   gem 'pry'
