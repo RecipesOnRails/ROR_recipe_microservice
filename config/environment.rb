@@ -9,3 +9,4 @@ Dotenv.load
 require "active_support/deprecation"
 require "active_support/all"
 require_all 'lib'
+require 'fast_jsonapi'

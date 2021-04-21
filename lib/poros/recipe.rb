@@ -8,7 +8,6 @@ class Recipe
               :nutrients
 
   def initialize(data)
-    # require 'pry'; binding.pry
     @id = data[:id]
     @name = data[:title]
     @image = data[:image]
@@ -17,7 +16,7 @@ class Recipe
     @ingredients = get_ingredients(data[:extendedIngredients])
     @nutrients = get_nutrients(data[:nutrition][:nutrients])
   end
-  
+
   def get_instructions(instructions, analyzed_instructions)
     if analyzed_instructions == []
       instructions
