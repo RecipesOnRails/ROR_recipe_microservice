@@ -3,6 +3,8 @@ require 'json'
 require 'fast_jsonapi'
 
 class RecipeMicroserviceController < Sinatra::Base
+set :show_exceptions, false
+
   get '/' do
     content_type :json
 
@@ -24,5 +26,9 @@ class RecipeMicroserviceController < Sinatra::Base
 
     data = RecipeFacade.parse_search_endpoint(params[:ingredient])
     data.to_json
+  end
+
+  error 400..500 do
+    "Your recipe could not be found"
   end
 end
