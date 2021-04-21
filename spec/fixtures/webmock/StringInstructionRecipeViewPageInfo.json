@@ -1,0 +1,354 @@
+{
+    "vegetarian": false,
+    "vegan": false,
+    "glutenFree": false,
+    "dairyFree": true,
+    "veryHealthy": false,
+    "cheap": false,
+    "veryPopular": false,
+    "sustainable": false,
+    "weightWatcherSmartPoints": 11,
+    "gaps": "no",
+    "lowFodmap": false,
+    "aggregateLikes": 0,
+    "spoonacularScore": 66.0,
+    "healthScore": 26.0,
+    "creditsText": "SippitySup",
+    "sourceName": "SippitySup",
+    "pricePerServing": 121.58,
+    "extendedIngredients": [
+        {
+            "id": 10311529,
+            "aisle": "Produce",
+            "image": "cherry-tomatoes.png",
+            "consistency": "solid",
+            "name": "cherry tomatoes",
+            "nameClean": "cherry tomato",
+            "original": "1 c halved ripe sweet 100 cherry tomatoes (about 24 tomatoes)",
+            "originalString": "1 c halved ripe sweet 100 cherry tomatoes (about 24 tomatoes)",
+            "originalName": "halved ripe sweet 100 cherry tomatoes (about 24 tomatoes)",
+            "amount": 1.0,
+            "unit": "c",
+            "meta": [
+                "sweet",
+                "ripe",
+                "halved",
+                "( 24 tomatoes)"
+            ],
+            "metaInformation": [
+                "sweet",
+                "ripe",
+                "halved",
+                "( 24 tomatoes)"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "cup",
+                    "unitLong": "cup"
+                },
+                "metric": {
+                    "amount": 236.588,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 11206,
+            "aisle": "Produce",
+            "image": "cucumber.jpg",
+            "consistency": "solid",
+            "name": "cucumber",
+            "nameClean": "cucumber",
+            "original": "1 small cucumber, sliced",
+            "originalString": "1 small cucumber, sliced",
+            "originalName": "cucumber, sliced",
+            "amount": 1.0,
+            "unit": "small",
+            "meta": [
+                "sliced"
+            ],
+            "metaInformation": [
+                "sliced"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "small",
+                    "unitLong": "small"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "small",
+                    "unitLong": "small"
+                }
+            }
+        },
+        {
+            "id": 10020005,
+            "aisle": "Pasta and Rice;Ethnic Foods;Health Foods",
+            "image": "farro-or-spelt.jpg",
+            "consistency": "solid",
+            "name": "farro",
+            "nameClean": "farro",
+            "original": "1 c whole-grain farro",
+            "originalString": "1 c whole-grain farro",
+            "originalName": "whole-grain farro",
+            "amount": 1.0,
+            "unit": "c",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "cup",
+                    "unitLong": "cup"
+                },
+                "metric": {
+                    "amount": 236.588,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        },
+        {
+            "id": 2044,
+            "aisle": "Produce;Spices and Seasonings",
+            "image": "basil.jpg",
+            "consistency": "solid",
+            "name": "fresh basil leaves",
+            "nameClean": "basil",
+            "original": "1 handful fresh basil leaves",
+            "originalString": "1 handful fresh basil leaves",
+            "originalName": "fresh basil leaves",
+            "amount": 1.0,
+            "unit": "handful",
+            "meta": [
+                "fresh"
+            ],
+            "metaInformation": [
+                "fresh"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "handful",
+                    "unitLong": "handful"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "handful",
+                    "unitLong": "handful"
+                }
+            }
+        },
+        {
+            "id": 4053,
+            "aisle": "Oil, Vinegar, Salad Dressing",
+            "image": "olive-oil.jpg",
+            "consistency": "liquid",
+            "name": "olive oil",
+            "nameClean": "olive oil",
+            "original": "6 T extra-virgin olive oil",
+            "originalString": "6 T extra-virgin olive oil",
+            "originalName": "extra-virgin olive oil",
+            "amount": 6.0,
+            "unit": "T",
+            "meta": [
+                "extra-virgin"
+            ],
+            "metaInformation": [
+                "extra-virgin"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 6.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                },
+                "metric": {
+                    "amount": 6.0,
+                    "unitShort": "Tbsps",
+                    "unitLong": "Tbsps"
+                }
+            }
+        },
+        {
+            "id": 1002030,
+            "aisle": "Spices and Seasonings",
+            "image": "pepper.jpg",
+            "consistency": "solid",
+            "name": "pepper",
+            "nameClean": "ground black pepper",
+            "original": "1 pn freshly crackked black pepper, plus more as needed",
+            "originalString": "1 pn freshly crackked black pepper, plus more as needed",
+            "originalName": "pn freshly crackked black pepper, plus more as needed",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [
+                "black",
+                "as needed",
+                "plus more "
+            ],
+            "metaInformation": [
+                "black",
+                "as needed",
+                "plus more "
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 2047,
+            "aisle": "Spices and Seasonings",
+            "image": "salt.jpg",
+            "consistency": "solid",
+            "name": "salt",
+            "nameClean": "salt",
+            "original": "1 pn salt, plus more as needed",
+            "originalString": "1 pn salt, plus more as needed",
+            "originalName": "pn salt, plus more as needed",
+            "amount": 1.0,
+            "unit": "",
+            "meta": [
+                "as needed",
+                "plus more "
+            ],
+            "metaInformation": [
+                "as needed",
+                "plus more "
+            ],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "",
+                    "unitLong": ""
+                }
+            }
+        },
+        {
+            "id": 93796,
+            "aisle": "Canned and Jarred",
+            "image": "anchovies.jpg",
+            "consistency": "solid",
+            "name": "salt packed anchovy",
+            "nameClean": "salt packed anchovies",
+            "original": "4 salt-packed anchovy fillets, rinsed and cut lengthwise into 3 or 4 strips each",
+            "originalString": "4 salt-packed anchovy fillets, rinsed and cut lengthwise into 3 or 4 strips each",
+            "originalName": "salt-packed anchovy fillets, rinsed and cut lengthwise into 3 or 4 strips each",
+            "amount": 4.0,
+            "unit": "fillet",
+            "meta": [
+                "rinsed",
+                "cut lengthwise into 3 or 4 strips each"
+            ],
+            "metaInformation": [
+                "rinsed",
+                "cut lengthwise into 3 or 4 strips each"
+            ],
+            "measures": {
+                "us": {
+                    "amount": 4.0,
+                    "unitShort": "fillet",
+                    "unitLong": "fillets"
+                },
+                "metric": {
+                    "amount": 4.0,
+                    "unitShort": "fillet",
+                    "unitLong": "fillets"
+                }
+            }
+        },
+        {
+            "id": 1012068,
+            "aisle": "Oil, Vinegar, Salad Dressing",
+            "image": "dark-sauce.jpg",
+            "consistency": "liquid",
+            "name": "sherry vinegar",
+            "nameClean": "sherry vinegar",
+            "original": "1 t sherry vinegar",
+            "originalString": "1 t sherry vinegar",
+            "originalName": "sherry vinegar",
+            "amount": 1.0,
+            "unit": "t",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                },
+                "metric": {
+                    "amount": 1.0,
+                    "unitShort": "tsp",
+                    "unitLong": "teaspoon"
+                }
+            }
+        },
+        {
+            "id": 14412,
+            "aisle": "Beverages",
+            "image": "water.png",
+            "consistency": "liquid",
+            "name": "water",
+            "nameClean": "water",
+            "original": "3 c water",
+            "originalString": "3 c water",
+            "originalName": "water",
+            "amount": 3.0,
+            "unit": "c",
+            "meta": [],
+            "metaInformation": [],
+            "measures": {
+                "us": {
+                    "amount": 3.0,
+                    "unitShort": "cups",
+                    "unitLong": "cups"
+                },
+                "metric": {
+                    "amount": 709.764,
+                    "unitShort": "ml",
+                    "unitLong": "milliliters"
+                }
+            }
+        }
+    ],
+    "id": 125,
+    "title": "Farro & Tomato Salad With Basil & Anchovies",
+    "readyInMinutes": 20,
+    "servings": 4,
+    "sourceUrl": "http://www.sippitysup.com/farro-tomato-salad-basil-anchovies",
+    "image": "https://spoonacular.com/recipeImages/125-556x370.jpg",
+    "imageType": "jpg",
+    "summary": "Farro & Tomato Salad With Basil & Anchovies might be just the side dish you are searching for. One serving contains <b>379 calories</b>, <b>6g of protein</b>, and <b>22g of fat</b>. This recipe serves 4 and costs $1.3 per serving. 1 person has made this recipe and would make it again. It is brought to you by SippitySup. A mixture of pn salt, sherry vinegar, salt-packed anchovy, and a handful of other ingredients are all it takes to make this recipe so yummy. From preparation to the plate, this recipe takes approximately <b>20 minutes</b>. It is a good option if you're following a <b>dairy free and pescatarian</b> diet. With a spoonacular <b>score of 71%</b>, this dish is solid. Similar recipes include <a href=\"https://spoonacular.com/recipes/farro-tomato-salad-with-basil-anchovies-253981\">Farro & Tomato Salad with Basil & Anchovies</a>, <a href=\"https://spoonacular.com/recipes/tomato-anchovies-with-bread-crumbs-basil-red-onion-recip-7\">Tomato & Anchovies With Bread Crumbs, Basil & Red Onion   Recip</a>, and <a href=\"https://spoonacular.com/recipes/farro-salad-with-tomatoes-and-basil-613406\">Farro Salad with Tomatoes and Basil</a>.",
+    "cuisines": [],
+    "dishTypes": [
+        "salad"
+    ],
+    "diets": [
+        "dairy free",
+        "pescatarian"
+    ],
+    "occasions": [],
+    "winePairing": {},
+    "instructions": null,
+    "analyzedInstructions": [],
+    "originalId": null
+}
