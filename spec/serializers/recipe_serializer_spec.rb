@@ -8,7 +8,7 @@ RSpec.describe 'recipe serializer' do
 
       serialized = RecipeSerializer.new(recipe_poro)
       recipe = JSON.parse(serialized.to_json, symbolize_names: true)
-
+      
       expect(recipe).to be_a(Hash)
       expect(recipe).to have_key(:data)
       expect(recipe[:data]).to have_key(:id)
@@ -35,7 +35,7 @@ RSpec.describe 'recipe serializer' do
         expect(instruction[:instruction]).to be_a(String)
       end
 
-      
+
       expect(recipe[:data][:attributes]).to have_key(:ingredients)
       expect(recipe[:data][:attributes][:ingredients]).to be_an(Array)
       recipe[:data][:attributes][:ingredients].each do |ingredient|
