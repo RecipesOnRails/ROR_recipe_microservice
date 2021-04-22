@@ -2,8 +2,6 @@ require 'sinatra'
 require 'json'
 
 class RecipeService
-
-
   def self.get_recipe_info(id)
     response = connection.get("/recipes/#{id}/information") do |request|
       request.params['includeNutrition'] = true
@@ -23,7 +21,7 @@ class RecipeService
   end
 
   private
-  
+
   def self.connection
     Faraday.new("https://api.spoonacular.com") do |request|
       request.params['apiKey'] = ENV["RECIPE_KEY"]
