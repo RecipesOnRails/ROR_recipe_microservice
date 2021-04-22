@@ -7,7 +7,6 @@ RSpec.describe Calorie do
     result = Calorie.new(calorie)
 #
     expect(result.class).to eq(Calorie)
-    expect(result.name).to eq("Chicken")
-#     expect(result.amount).to eq("2 lbs.")
+    expect(result.calories).to eq(521)
   end
 end
