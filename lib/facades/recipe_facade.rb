@@ -2,7 +2,6 @@ class RecipeFacade
 
   def self.parse_recipe_endpoint(id)
     recipe = RecipeService.get_recipe_info(id)
-    require "pry";binding.pry
     Recipe.new(recipe)
   end
 
