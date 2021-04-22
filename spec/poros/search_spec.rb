@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe "search poro" do
   it 'can create a search poro in facade' do
-    VCR.use_cassette("recipesearchwithdiet") do
+    VCR.use_cassette("recipesearchwithdiet", :allow_playback_repeats => true) do
       ingredient = 'chicken'
       diet = 'gluten free'
       recipe = RecipeService.get_recipe_search(ingredient, diet)

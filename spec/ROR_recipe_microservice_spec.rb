@@ -11,7 +11,7 @@ RSpec.describe RecipeMicroserviceController, type: :request do
    it 'returns a recipes details' do
       VCR.use_cassette("RecipeViewRequest") do
         get '/api/v1/recipes/12'
-        # require 'pry'; binding.pry
+
         recipe = JSON.parse(last_response.body, symbolize_names: true)
         expect(recipe).to be_a(Hash)
 
@@ -60,18 +60,18 @@ RSpec.describe RecipeMicroserviceController, type: :request do
     VCR.use_cassette("searchcontroller") do
       get '/api/v1/search/chicken'
 
-      data = JSON.parse(last_response.body, symbolize_names: true)
-      expect(data).to be_a(Array)
-      data.each do |recipe|
-        expect(recipe).to have_key(:title)
-        expect(recipe[:title]).to be_a(String)
-        expect(recipe).to have_key(:image)
-        expect(recipe[:image]).to be_a(String)
-        expect(recipe).to have_key(:id)
-        expect(recipe[:id]).to be_a(Integer)
-        expect(recipe).to have_key(:cuisine)
-        expect(recipe).to have_key(:calories)
-        expect(recipe[:calories]).to be_a(Float)
+      recipes = JSON.parse(last_response.body, symbolize_names: true)
+      expect(recipes).to be_a(Hash)
+      recipes[:data].each do |recipe|
+        expect(recipe[:attributes]).to have_key(:title)
+        expect(recipe[:attributes][:title]).to be_a(String)
+        expect(recipe[:attributes]).to have_key(:image)
+        expect(recipe[:attributes][:image]).to be_a(String)
+        expect(recipe[:attributes]).to have_key(:id)
+        expect(recipe[:attributes][:id]).to be_a(Integer)
+        expect(recipe[:attributes]).to have_key(:cuisine)
+        expect(recipe[:attributes]).to have_key(:calories)
+        expect(recipe[:attributes][:calories]).to be_a(Float)
       end
     end
   end

@@ -25,7 +25,9 @@ set :show_exceptions, false
     content_type :json
 
     data = RecipeFacade.parse_search_endpoint(params[:ingredient])
-    data.to_json
+
+    body SearchSerializer.new(data).serialized_json
+    status 201
   end
 
   error 400..500 do
