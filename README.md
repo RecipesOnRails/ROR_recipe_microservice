@@ -44,8 +44,33 @@ We utilized the [Spoonacular Public APIs](https://spoonacular.com/food-api) to a
             }
           }
         } `
+  
+  ### Get recipe search
+  
+  **Required** params:  
+    * `ingredient` 
+  
+  **Optional** params:  
+    * `diet` 
     
     
+    ` GET https://pure-chamber-22336.herokuapp.com/api/v1//recipes/complexSearch `
+    
+    ` {"data": [
+        {
+            "id": "id",
+            "type": "search",
+            "attributes": {
+                "id": id,
+                "title": "Recipe name",
+                "image": "Image URL",
+                "cuisine": "Recipe cuisine",
+                "calories": calories
+            }
+          }
+        ]
+      } ` 
+      
 ## Built With
 
 - Sinatra
