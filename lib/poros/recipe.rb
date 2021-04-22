@@ -14,7 +14,7 @@ class Recipe
     @recipe_info = data[:summary]
     @instructions = new_recipe_instructions(data[:instructions], data[:analyzedInstructions])
     @ingredients = new_recipe_ingredients(data[:extendedIngredients])
-    @nutrients = new_recipe_nutrients((data[:nutrtion] != nil) ? data[:nutrition][:nutrients] : nil)
+    @nutrients = new_recipe_nutrients((data[:nutrition] != nil) ? data[:nutrition][:nutrients] : nil)
   end
 
   def new_recipe_instructions(instructions, analyzed_instructions)
