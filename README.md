@@ -4,22 +4,46 @@ We utilized the [Spoonacular Public APIs](https://spoonacular.com/food-api) to a
 
 ## Endpoints
 
-  ### Endpoint name
+  ### Get recipe info
   
   **Required** params:  
-    * param 1  
-    * param 2
+    * `recipe id` 
+  
     
-    ` get request `
+    ` GET https://pure-chamber-22336.herokuapp.com/api/v1/recipes/#{id} `
     
     ` {"data": {
+          "id": "id",
+          "type": "recipe",
           "attributes": {
-              "id": Integer,
-              "title": String,
-              "summary": Text
+              "id": id,
+              "name": "Recipe name",
+              "image": "Image URL",
+              "recipe_info": "Recipe summary",
+              "instructions": [
+                  {
+                    "step": 1, 
+                    "instruction": "First instruction" 
+                   },
+                  {
+                    "step": 2, 
+                    "instruction": "Second instruction"
+                   }
+              ],
+              "ingedients": [
+                  {
+                    "name": "Ingredient name",
+                    "amount": "Amount"
+                   },
+              "nutrients":  [
+                  {
+                    "name": "Calories",
+                    "amount": "Amount:
+                   }
+              ]     
+            }
           }
-        }
-      } `
+        } `
     
     
 ## Built With
